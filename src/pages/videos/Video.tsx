@@ -1,10 +1,11 @@
 import React from 'react';
-import {Routes} from "react-router-dom";
+import {Routes, useParams} from "react-router-dom";
 
 const Video = () => {
+  const { keyword } = useParams();
   return (
     <div className="video">
-      Videos
+      Videos {keyword ? keyword : ""}
     </div>
   );
 };
